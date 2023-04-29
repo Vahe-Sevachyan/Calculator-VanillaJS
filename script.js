@@ -9,3 +9,16 @@ let displayValue = 0;
 let firstNum = "";
 let secondNum = "";
 let operator = "";
+
+function add(firstNum, secondNum) {
+  console.log(firstNum + secondNum);
+}
+function subtract(firstNum, secondNum) {
+  console.log(firstNum - secondNum);
+}
+function multiply() {}
+function divide() {}
+
+function operate() {}
+add(1, 2);
+subtract(10, 3);
