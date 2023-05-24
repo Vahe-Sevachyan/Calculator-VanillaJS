@@ -10,32 +10,29 @@ let firstNum = "";
 let secondNum = "";
 let operator = "";
 
-// numbers.forEach((number) => {
-//   number.addEventListener("click", (e) => {
-//     // Read first number if no operator set yet
-//     firstNum += e.target.innerText;
-//     inputDisplay.textContent = firstNum;
-//   });
-// });
+function add(firstNum, secondNum) {
+  inputDisplay.textContent = parseInt(firstNum) + parseInt(secondNum);
+}
+function subtract(firstNum, secondNum) {
+  return firstNum - secondNum;
+}
+function multiply(firstNum, secondNum) {
+  return firstNum * secondNum;
+}
+function divide(firstNum, secondNum) {
+  return firstNum / secondNum;
+}
 
-// operators.forEach((op) => {
-//   op.addEventListener("click", (e) => {
-//     operator = e.target.innerText;
-//     operatorDisplay.textContent = operator;
-//     if (!operator === "") {
-//     }
-//     // If equals operator, perform operation
-//   });
-// });
 numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
     if (operator === "") {
-      // Read first number if no operator set yet
+      // Read first number if no operator set
       firstNum += e.target.innerText;
       inputDisplay.textContent = firstNum;
     } else {
-      // Read second number
+      // if operator does not equal empty string read second number
       secondNum += e.target.innerText;
+      inputDisplay.textContent = secondNum;
     }
   });
 });
@@ -43,28 +40,66 @@ numbers.forEach((number) => {
 operators.forEach((op) => {
   op.addEventListener("click", (e) => {
     if (e.target.innerText !== "=") {
-      // If the operator is not equals
+      // if selected button is not the "=" record operator selected
       operator = e.target.innerText;
-
-      console.log(firstNum); // Print the first number
-      console.log(operator); // Print the operator
+      //if selected button is "=" pass the values to the function
     } else {
-      // If equals button clicked
-      console.log(secondNum); // Print 2nd number
-
-      switch (
-        operator // Calculate and print output
-      ) {
-        case "+":
-          console.log(parseInt(firstNum) + parseInt(secondNum));
-          break;
-        case "-":
-          console.log(parseInt(firstNum) - parseInt(secondNum));
-          break;
-        // etc...
-        default:
-          break;
-      }
+      operate(firstNum, secondNum, operator);
     }
   });
 });
+
+function operate(firstNum, secondNum, operatorSymbol) {
+  if (operatorSymbol === "+") {
+    add(firstNum, secondNum);
+  } else if (operatorSymbol === "−") {
+    subtract(firstNum, secondNum);
+  } else if (operatorSymbol === "×") {
+    multiply(firstNum, secondNum);
+  } else operatorSymbol === "÷";
+  divide(firstNum, secondNum);
+}
+
+// numbers.forEach((number) => {
+//   number.addEventListener("click", (e) => {
+//     if (operator === "") {
+//       // Read first number if no operator set
+//       firstNum += e.target.innerText;
+//       inputDisplay.textContent = firstNum;
+//     } else {
+//       // Read second number
+//       secondNum += e.target.innerText;
+//       inputDisplay.textContent = secondNum;
+//     }
+//   });
+// });
+
+// operators.forEach((op) => {
+//   op.addEventListener("click", (e) => {
+//     if (e.target.innerText !== "=") {
+//       // If the operator is not equals
+//       operator = e.target.innerText;
+//     } else {
+//       // If equals button clicked
+//       switch (
+//         operator // Calculate and print output
+//       ) {
+//         case "+":
+//           inputDisplay.innerText = parseInt(firstNum) + parseInt(secondNum);
+//           break;
+//         case "−":
+//           inputDisplay.innerText = parseInt(firstNum) - parseInt(secondNum);
+//           break;
+//         case "×":
+//           inputDisplay.innerText = parseInt(firstNum) * parseInt(secondNum);
+//           break;
+//         case "÷":
+//           inputDisplay.innerText = parseInt(firstNum) / parseInt(secondNum);
+//           break;
+//         // etc...
+//         default:
+//           break;
+//       }
+//     }
+//   });
+// });
