@@ -14,22 +14,25 @@ function add(firstNum, secondNum) {
   inputDisplay.textContent = parseInt(firstNum) + parseInt(secondNum);
 }
 function subtract(firstNum, secondNum) {
-  inputDisplay.textContent = parsInt(firstNum) - parsInt(secondNum);
+  inputDisplay.textContent = parseInt(firstNum) - parsInt(secondNum);
 }
 function multiply(firstNum, secondNum) {
-  inputDisplay.textContent = parsInt(firstNum) * parsInt(secondNum);
+  inputDisplay.textContent = parseInt(firstNum) * parsInt(secondNum);
 }
 function divide(firstNum, secondNum) {
-  inputDisplay.textContent = parsInt(firstNum) / parsInt(secondNum);
+  inputDisplay.textContent = parseInt(firstNum) / parsInt(secondNum);
 }
 
-function addDot() {}
-dot.addEventListener("click");
+// function addDot() {}
+// dot.addEventListener("click");
 
 numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
     if (operator === "") {
       // Read first number if no operator set
+      // if (firstNum.includes(".")) {
+      //   firstNum.setAttribute("disabled", true);
+      // }
       firstNum += e.target.innerText;
       inputDisplay.textContent = firstNum;
     } else {
