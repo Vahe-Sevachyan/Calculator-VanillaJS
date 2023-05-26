@@ -14,14 +14,17 @@ function add(firstNum, secondNum) {
   inputDisplay.textContent = parseInt(firstNum) + parseInt(secondNum);
 }
 function subtract(firstNum, secondNum) {
-  return firstNum - secondNum;
+  inputDisplay.textContent = parsInt(firstNum) - parsInt(secondNum);
 }
 function multiply(firstNum, secondNum) {
-  return firstNum * secondNum;
+  inputDisplay.textContent = parsInt(firstNum) * parsInt(secondNum);
 }
 function divide(firstNum, secondNum) {
-  return firstNum / secondNum;
+  inputDisplay.textContent = parsInt(firstNum) / parsInt(secondNum);
 }
+
+function addDot() {}
+dot.addEventListener("click");
 
 numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
