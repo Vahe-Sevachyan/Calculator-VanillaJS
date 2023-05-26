@@ -14,13 +14,13 @@ function add(firstNum, secondNum) {
   inputDisplay.textContent = parseInt(firstNum) + parseInt(secondNum);
 }
 function subtract(firstNum, secondNum) {
-  inputDisplay.textContent = parseInt(firstNum) - parsInt(secondNum);
+  inputDisplay.textContent = parseInt(firstNum) - parseInt(secondNum);
 }
 function multiply(firstNum, secondNum) {
-  inputDisplay.textContent = parseInt(firstNum) * parsInt(secondNum);
+  inputDisplay.textContent = parseInt(firstNum) * parseInt(secondNum);
 }
 function divide(firstNum, secondNum) {
-  inputDisplay.textContent = parseInt(firstNum) / parsInt(secondNum);
+  inputDisplay.textContent = parseInt(firstNum) / parseInt(secondNum);
 }
 
 // function addDot() {}
