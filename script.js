@@ -30,9 +30,6 @@ numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
     if (operator === "") {
       // Read first number if no operator set
-      // if (firstNum.includes(".")) {
-      //   firstNum.setAttribute("disabled", true);
-      // }
       firstNum += e.target.innerText;
       inputDisplay.textContent = firstNum;
     } else {
